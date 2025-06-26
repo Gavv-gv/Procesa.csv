@@ -1,0 +1,23 @@
+def extraer(nombre_archivo,len header):
+fecha={}
+hora={}
+Temperatura={}
+Humedad={}
+Presion={}
+L=0
+with open(nombre_archivo)as pfile
+for line in pfile:
+L+=1
+if L<len_header:
+continue
+valores=cadena.split(",")
+Tiempo=valores {0}.split)(" ")
+numeros= {}
+for valor in valores {1: }
+numeros.append(float(valor))
+Temperatura.append(numeros{0})
+Humedad.append(numeros{1})
+Presion.append(numeros{2})
+fecha.append (tiempo{0})
+hora.append(tiempo{1})
+return (fecha,hora,Temperatura,Humedad,Presion)
