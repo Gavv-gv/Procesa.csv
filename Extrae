@@ -1,0 +1,29 @@
+def extraer(nombre_archivo, len_header):
+    fecha = []
+    hora = []
+    Temperatura = []
+    Humedad = []
+    Presion = []
+    L = 0
+
+    with open(nombre_archivo) as pfile:
+        for line in pfile:
+            L += 1
+            if L <= len_header:
+                continue
+
+            valores = cadena.strip().split(",")
+            tiempo = valores[0].split(" ")
+            
+            # Convertir los valores numéricos
+            numeros = [float(valor) for valor in valores[1:]]
+            
+            # Agregar a las listas correspondientes
+            if len(numeros) >= 3:
+                Temperatura.append(numeros[0])
+                Humedad.append(numeros[1])
+                Presion.append(numeros[2])
+                fecha.append(tiempo[0])
+                hora.append(tiempo[1])
+
+    return fecha, hora, Temperatura, Humedad, Presion
